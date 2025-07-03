@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <script src="script/script.js"></script>
+    <script src="https://kit.fontawesome.com/8a70b1b12d.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Betton - Portfolio</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Thomas Betton</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="profile-container">
+                    <img src="img/me.jpeg" alt="Photo de Thomas Betton" class="profile-image">
+                    <div class="text-content">
+                        <h1>Thomas Betton</h1>
+                        <h2>AI Research Engineer, CNRS</h2>
+                    </div>
+                </div>
+                <p>Passionate about AI and its applications, I help researchers in implementing AI solutions using supercomputers and I enjoy sharing my knowledge by organizing training courses.</p>
+                <div class="logo-bg">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/thomas-betton-170228184/" target="_blank"><i class="fab fa-linkedin-in color-social"></i></a>
+                        <a href="mailto:thomas.betton@gmail.com" target="_blank"><i class="fas fa-envelope color-social"></i>
+                        <a href="https://github.com/thomasbtnfr" target="_blank"><i class="fab fa-github color-social"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#experience" class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Experience</h2>
+                <div class="fade-in">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <div class="experience-company-logo">
+                                    <img src="img/cnrs.png" alt="CNRS Logo" class="company-logo">
+                                </div>
+                                <div class="experience-text">
+                                    <div class="experience-title">AI Research Engineer</div>
+                                    <div class="experience-company">CNRS</div>
+                                </div>
+                            </div>
+                            <div class="experience-date">October 2022 - <b>Ongoing</b></div>
+                        </div>
+                        <div class="experience-description">
+                            <b>I support AI research projects as part of the National AI Research Program (PNRIA) using the Jean Zay supercomputer, and I give AI-related training courses.</b>
+                        </div>
+                        <button class="see-more-btn" onclick="toggleExperienceDetails(this)">See more</button>
+                        <div class="experience-extended">
+                            <h4>Some projects</h4>
+                            <ul>
+                                <li><b>AutoSynth (LaBRI):</b> code generation with LLMs in Reverse Polish Notation. Keywords: LLM, StarCoder2, multi-gpu, multi-node, finetuning, evaluation</li>
+                                <li><b>ARAI (LISN):</b> image/video generation model inference acceleration to introduce subtle visual modifications in real time in augmented reality and LTX-Video model finetuning. <br><a href="https://www.youtube.com/watch?v=Gk2dtoOXDac&ab_channel=martinkrpka">Demo</a> + <a href="https://www.youtube.com/live/gBeZSbaxMvc?si=qr5cMNz5WXu8Jt7d&t=7061">Keynote</a></li>
+                                <li><b>Lynx-ID (CEFE):</b> individual lynx identification from images and unique lynx coat patterns to estimate population size.</li>
+                                <li><b>scikit-mine (IRISA):</b> development of a Python library of data mining algorithms compatible with scikit-learn. Algorithm implementation, optimization and tutorial production.<br><a href="https://github.com/scikit-mine/scikit-mine">Github</a> + <a href="https://hal.science/hal-04405499v1/file/peggy_cellier_lacodam.pdf">Poster SMiLe (Spring workshop on Mining and Learning)</a></li>
+                                <li><b>CLUSTER (LPC2E):</b> use of space data collected on board of 4 ESA satellites over the last 20 years to predict the electromagnetic frequency of plasma in the magnetosphere</li>
+                            </ul>
+                            <hr class="section-divider">
+                            <h4>Teachings</h4>
+                            <div class="experience-description">
+                                <b>During my time at CNRS, one of my activities is to give AI courses to academic, public and even private companies. Here are the main courses I've given:</b>
+                            </div>
+                            <ul>
+                                <li>
+                                    <b>Specialization of Large Language Models: Prompt Engineering & Fine-tuning</b><br>
+                                    This advanced course focuses on strategies to adapt language models to specific datasets or use-cases. I designed part of the course and organize it regularly with engineers from IDRIS (CNRS, Paris-Saclay).
+                                    <div class="teaching-core-concepts">
+                                        <b>Key concepts:</b>
+                                        <ul>
+                                            <li>Transformer theory and finetuning of different architectures (decoder, encoder, encoder-decoder)</li>
+                                            <li>Evaluation & metrics</li>
+                                            <li>Data cleaning</li>
+                                            <li>Prompt engineering</li>
+                                            <li>RAG</li>
+                                            <li>Inference optimization</li>
+                                            <li>Preference alignment</li>
+                                            <li>PEFT (Parameter Efficient Finetuning)</li>
+                                        </ul>
+                                    </div>
+                                    They trusted us: academics, RTE, Thales, France Travail, EDF, Meteo France, French ministries, AMIAD, CEA and many more... 
+                                </li>
+                                <li><b>Internal training:</b> state of the art, technology watch, scientific conference feedback...</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <div class="experience-company-logo">
+                                    <img src="img/capgemini.png" alt="Capgemini Logo" class="company-logo">
+                                </div>
+                                <div class="experience-text">
+                                    <div class="experience-title">Data Intern</div>
+                                    <div class="experience-company">Capgemini</div>
+                                </div>
+                            </div>
+                            <div class="experience-date">June 2021 - August 2022</div>
+                        </div>
+                        <div class="experience-description">
+                            Internship from June 2021 to August 2021, then professional training contract from September 2021 to August 2022.<br><br>
+                            <b>Integrated into a project to create a platform for validating driver assistance systems in a cloud environment (Azure) for several car manufacturers.</b>
+                        </div>
+                        <button class="see-more-btn" onclick="toggleExperienceDetails(this)">See more</button>
+                        <div class="experience-extended">
+                            <h4>Main activities:</h4>
+                            <ul>
+                                <li>Traceability of data and actions via creation of a Python API (Flask, FastAPI) and creation of monitoring dashboards with Power BI</li>
+                                <li>Redesign of data model: graph-oriented NoSQL (ArangoDB) to SQL model (SQL Server)</li>
+                                <li>Deployments on Azure (Function App, App Service, Azure API Management) and automation via CI/CD</li>
+                                <li>Use of Big Data tools (Scala, Spark, Hadoop...)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Skills</h2>
+                <div class="skill-content fade-in">
+                    <!-- Bloc Languages -->
+                    <div class="skills-category">
+                        <div class="skills-category-header">
+                            <div class="skills-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-name">French</div>
+                                <div class="skill-level">Native</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">English</div>
+                                <div class="skill-level">Professional (TOEIC: 935/990)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <div class="skills-category-header">
+                            <div class="skills-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Core AI & ML</h3>
+                        </div>
+                        <div class="skills">
+                            <div class="skill-tag">Machine/Deep Learning</div>
+                            <div class="skill-tag">NLP & LLM</div>
+                            <div class="skill-tag">Computer Vision</div>
+                            <div class="skill-tag">Diffusion Models</div>
+                            <div class="skill-tag">Distributed Learning</div>
+                            <div class="skill-tag">Evaluation</div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <div class="skills-category-header">
+                            <div class="skills-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Technology stack</h3>
+                        </div>
+                        <div class="skills">
+                            <div class="skill-tag">PyTorch</div>
+                            <div class="skill-tag">Transformers</div>
+                            <div class="skill-tag">LangChain</div>
+                            <div class="skill-tag">vLLM</div>
+                            <div class="skill-tag">Python</div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <div class="skills-category-header">
+                            <div class="skills-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Tools</h3>
+                        </div>
+                        <div class="skills">
+                            <div class="skill-tag">Git</div>
+                            <div class="skill-tag">Docker</div>
+                            <div class="skill-tag">Slurm</div>
+                            <div class="skill-tag">Markdown</div>
+                            <div class="skill-tag">CI/CD</div>
+                            <div class="skill-tag">Bash</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Education</h2>
+                <div class="education-grid fade-in">
+                    <div class="education-card">
+                        <img src="img/insa.png" alt="INSA Rennes logo" class="education-logo" />
+                            <div>
+                                <div class="education-degree">Master of Science in Computer Science with specialization in Data Science</div>
+                                <div class="education-school">INSA Rennes</div>
+                                <div class="education-date">2017 - 2022</div>
+                            </div>
+                    </div>
+                    <div class="education-card">
+                        <img src="img/lavoisier.png" alt="Lavoisier logo" class="education-logo" />
+                        <div>
+                            <div class="education-degree">High School Diploma in Science with Highest Honours</div>
+                            <div class="education-school">Lavoisier High School, Mayenne</div>
+                            <div class="education-date">2014 - 2017</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/thomas-betton-170228184/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:thomas.betton@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/thomasbtnfr" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 Thomas Betton. All rights reserved.</p>
+        </div>
+  <p id="lastUpdate"></p>
+  <script>
+    showLastUpdate("lastUpdate");
+  </script>
+    </footer>
+</body>
+</html>
