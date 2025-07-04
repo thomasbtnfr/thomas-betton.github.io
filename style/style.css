@@ -521,6 +521,17 @@ nav {
     flex-grow: 1;
 }
 
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    margin-top: 1rem;
+  }
+}
+
 .profile-image:hover {
     transform: scale(1.05);
 }
