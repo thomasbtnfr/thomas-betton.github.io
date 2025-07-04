@@ -227,7 +227,7 @@ nav {
 /* Sections */
 .section {
     padding: 5rem 0;
-    width: 100%
+    width: 100%;
 }
 
 .section:nth-child(even) {
@@ -317,25 +317,18 @@ nav {
     .scroll-indicator {
         bottom: 20px;
     }
-    
+
     .scroll-arrow {
         width: 40px;
         height: 40px;
     }
-    
+
     .scroll-arrow i {
         font-size: 1rem;
     }
 }
 
 /* Skills Section */
-.skills-content {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
 .skill-name {
     font-size: 1.2rem;
     font-weight: 600;
@@ -377,7 +370,7 @@ nav {
     box-shadow: var(--shadow);
 }
 
-.skills-category:nth-child(2) .skills-icon {
+.skills-category:nth-child(even) .skills-icon {
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
 }
 
@@ -407,7 +400,7 @@ nav {
     box-shadow: var(--shadow);
 }
 
-.skills-category:nth-child(2) .skill-item {
+.skills-category:nth-child(even) .skill-item {
     border-left-color: var(--secondary-color);
 }
 
@@ -448,7 +441,7 @@ nav {
     position: relative;
 }
 
-.skills-category:nth-child(2) .skill-progress {
+.skills-category:nth-child(even) .skill-progress {
     background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
 }
 
@@ -468,39 +461,40 @@ nav {
     100% { transform: translateX(100%); }
 }
 
+.skill-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
-    .skills-content {
-        gap: 2rem;
-    }
-    
+
     .skills-category {
         padding: 1.5rem;
     }
-    
+
     .skills-category-header {
         flex-direction: row;
         text-align: left;
         gap: 1rem;
     }
-    
+
     .skills-icon {
         width: 40px;
         height: 40px;
         font-size: 1rem;
     }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
-        flex-direction: row;
-    }
-}
 
-.skill-content {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 4rem;
-    align-items: stretch;
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill-content {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .skill-image {
@@ -564,6 +558,40 @@ nav {
     background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
+}
+
+.language-tag {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.language-tag:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.language-level {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.language-tag:hover .language-level {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Experience Section */
@@ -643,22 +671,22 @@ nav {
     white-space: nowrap;
 }
 
-/* Responsive design pour les logos */
+/* Responsive design*/
 @media (max-width: 768px) {
     .experience-header {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .experience-info {
         align-items: flex-start;
     }
-    
+
     .company-logo {
         width: 40px;
         height: 40px;
     }
-    
+
     .experience-date {
         align-self: flex-start;
     }
@@ -728,7 +756,6 @@ nav {
     line-height: 1;
 }
 
-/* Style amélioré pour le bouton See More */
 .see-more-btn {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
@@ -770,7 +797,6 @@ nav {
     left: 100%;
 }
 
-/* Contenu étendu caché par défaut */
 .experience-extended {
     max-height: 0;
     overflow: hidden;
@@ -852,13 +878,12 @@ nav {
 }
 
 .education-logo {
-    width: 80px; /* Ajuste selon la taille souhaitée */
+    width: 80px;
     height: auto;
     margin-right: 1.5rem;
-    flex-shrink: 0; /* Empêche le logo de rétrécir */
+    flex-shrink: 0;
 }
 
-/* Texte contenu dans un div qui prend le reste de la place */
 .education-card > div {
     flex: 1;
 }
